@@ -1,0 +1,52 @@
+<form [formGroup]="ownerForm" (ngSubmit)="onSubmit()"  class="row g-3 m-2">
+    <div class="col-md-6">
+      <label for="first-name" class="form-label">Nombre</label>
+      <input type="email" class="form-control" id="first-name" formControlName="first_name" >
+    </div>
+    <div class="col-md-6">
+        <label for="second-name" class="form-label">Segundo nombre</label>
+        <input type="email" class="form-control" id="second-name" formControlName="second_name" >
+    </div>
+    <div class="col-md-6">
+        <label for="last-name" class="form-label">Apellido</label>
+        <input type="email" class="form-control" id="last-name" formControlName="last_name" >
+    </div>
+    <div class="col-md-6">
+        <label for="owner-type" class="form-label">Tipo Propietario</label>
+        <select id="owner-type" class="form-select" formControlName="owner_type" >
+          <option selected>Selecciona un tipo</option>
+          <option>Persona</option>
+          <option>Compañía</option>
+          <option>Otro</option>
+        </select>
+    </div>
+    <div class="col-md-4">
+        <label for="doc-type" class="form-label">Tipo Documento</label>
+        <select id="doc-type" class="form-select" formControlName="document_type" >
+          <option selected>Selecciona un tipo</option>
+          <option>DNI</option>
+          <option>Cédula</option>
+          <option>Pasaporte</option>
+        </select>
+    </div>
+    <div class="col-md-8">
+      <label for="doc-number" class="form-label">Numero</label>
+      <input type="text" class="form-control" id="doc-number" formControlName="document_number" >
+    </div>
+    <div class="col-md-6">
+      <label for="cuit-number" class="form-label">CUIT</label>
+      <input type="text" class="form-control" id="cuit-number" formControlName="cuit" >
+    </div>
+    <div class="col-6">
+      <label for="bank-account" class="form-label">Cuenta Bancaria  </label>
+      <input type="text" class="form-control" id="bank-account" formControlName="bank_account" >
+    </div>
+    <div class="col-12">
+      <label for="birth-date" class="form-label">Fecha de Nacimiento</label>
+      <input type="date" class="form-control" id="birth-date" formControlName="birth_date" >
+    </div>
+
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Cargar Propietario</button>
+    </div>
+  </form>

@@ -1,0 +1,55 @@
+<form class="row g-3 m2" >
+    <h4>Agregar Dirección</h4>
+    <div class="row">
+      <div class="col-md-6">
+        <label for="street-address" class="form-label">Calle</label>
+        <input type="text" class="form-control" id="street-address" >
+      </div>
+      <div class="col-md-6">
+        <label for="number" class="form-label">Numero</label>
+        <input type="number" class="form-control" id="number">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="floor" class="form-label">Piso</label>
+      <input type="number" class="form-control" id="floor">
+    </div>
+    <div class="col-md-6">
+      <label for="apartment" class="form-label">Depto</label>
+      <input type="text" class="form-control" id="apartment">
+    </div>
+    <div class="col-md-6">
+      <label for="country" class="form-label">Pais</label>
+      <select id="country" class="form-select">
+        <option selected>Selecciona un tipo</option>
+        <option>Argentina</option>
+        <option>Other</option>
+      </select>
+    </div>
+    <div class="col-md-6">
+      <label for="province" class="form-label">Provincia</label>
+      <select id="province" class="form-select">
+        <option selected>Selecciona un tipo</option>
+        <option>Argentina</option>
+        <option>Other</option>
+      </select>
+    </div>
+    <div class="col-md-6">
+      <label for="city" class="form-label">Ciudad</label>
+      <input type="text" class="form-control" id="city">
+    </div>
+    <div class="col-md-6">
+      <label for="postal-code" class="form-label">Codigo Postal</label>
+      <input type="number" class="form-control" id="postal-code">
+    </div>
+
+    <hr />
+    <div class="col-md-6">
+      <label for="validated" class="form-label">Validado</label>
+      <input type="checkbox" class="form-control" id="validated">
+    </div>
+
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Agregar direccion</button>
+    </div>
+  </form>
