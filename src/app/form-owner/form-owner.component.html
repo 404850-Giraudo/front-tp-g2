@@ -1,4 +1,5 @@
 <form [formGroup]="ownerForm" (ngSubmit)="onSubmit()"  class="row g-3 m-2">
+  <h3 class="mt-2 p-2">Cargar nuevo Propietario </h3>
     <div class="col-md-6">
       <label for="first-name" class="form-label">Nombre</label>
       <input type="email" class="form-control" id="first-name" formControlName="first_name" >
@@ -14,10 +15,9 @@
     <div class="col-md-6">
         <label for="owner-type" class="form-label">Tipo Propietario</label>
         <select id="owner-type" class="form-select" formControlName="owner_type" >
-          <option selected>Selecciona un tipo</option>
-          <option>Persona</option>
-          <option>Compañía</option>
-          <option>Otro</option>
+          @for (type of ownerTypes; track type) {
+            <option value={{type}}>{{type}}</option>
+        }
         </select>
     </div>
     <div class="col-md-4">

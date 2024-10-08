@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormAddressComponent } from '../form-address/form-address.component';
 import { FormContactComponent } from '../form-contact/form-contact.component';
 import { ReactiveFormsModule, FormControl, FormGroup, Validators } from '@angular/forms';
+import { OwnerService } from '../services/owner.service';
 
 @Component({
   selector: 'app-form-owner',
@@ -11,14 +12,18 @@ import { ReactiveFormsModule, FormControl, FormGroup, Validators } from '@angula
   styleUrl: './form-owner.component.css'
 })
 export class FormOwnerComponent {
+
+  private ownerService = inject(OwnerService);
+
+  ownerTypes : string[] = ['Person', 'Company', 'Other']
  
   ownerForm = new FormGroup({
     first_name: new FormControl('', [Validators.required]),
     second_name: new FormControl(''),
     last_name: new FormControl('', [Validators.required]),
-    owner_type: new FormControl('PERSON'),
+    owner_type: new FormControl(''),
     document_number: new FormControl('', [Validators.required]),
-    document_type: new FormControl('DNI'),
+    document_type: new FormControl(''),
     cuit: new FormControl(''),
     bank_account: new FormControl(''),
     birth_date: new FormControl('', [Validators.required]),

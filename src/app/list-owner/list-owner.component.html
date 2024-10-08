@@ -1,0 +1,39 @@
+<div class="card m-3 p-2">
+    <div class="card-header"><h3 class="mt-2">Lista de Propietarios</h3></div>
+    <div class="card-body">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Documento n°</th>
+            <th scope="col">Tipo Propietario</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+            @for(owner of owners; track owner)
+            {
+                <tr>
+                    <td>
+                        {{ owner.first_name + " " + owner.second_name }}
+                    </td>
+                    <td>
+                        {{ owner.last_name }}
+                    </td>
+                    <td>
+                        {{ owner.document_number }}
+                    </td>
+                    <td>
+                        {{ owner.owner_type}}
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-danger mat-fab mx-2">Eliminar</button>
+                        <button type="button" class="btn btn-info mx-2">Editar</button>
+                    </td>
+                </tr>
+                }
+        </tbody>
+      </table>
+    </div>
+  </div>
