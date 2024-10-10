@@ -1,19 +1,19 @@
-<form class="row g-3">
+<form [formGroup]="contactForm" class="row g-3">
   <h3 class="mt-2 p-2">Añadir contacto</h3>
-    <div class="col-md-4">
+    <div class="col-3">
         <label for="contact-type" class="form-label">Tipo Contacto</label>
-        <select id="contact-type" class="form-select">
+        <select id="contact-type" class="form-select" formControlName="contact_type">
           <option selected>Selecciona un tipo</option>
           <option>Telefono</option>
           <option>Email</option>
           <option>Other</option>
         </select>
     </div>
-    <div class="col-md-6">
-      <label for="contact-info" class="form-label">Numero</label>
-      <input type="text" class="form-control" id="contact-info">
+    <div class="col-9">
+      <label for="contact-info" class="form-label">Contacto</label>
+      <input type="text" class="form-control" id="contact-info" formControlName="contact_value">
     </div>
     <div class="col-12">
-      <button type="submit" class="btn btn-primary">Agregar Contacto</button>
+      <button type="button" onclick="addContact()" class="btn btn-primary">Agregar Contacto</button>
     </div>
-  </form>
+</form>
